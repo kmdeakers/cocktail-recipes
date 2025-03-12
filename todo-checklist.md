@@ -18,20 +18,20 @@
   - [x] /types
   - [x] /lib
   - [x] /public
-  - [ ] /__tests__
+  - [x] /__tests__
 - [ ] Create GitHub Actions CI workflow for linting and testing
   - [ ] Include Next.js build step
   - [ ] Configure Next.js-specific linting rules
 - [ ] Configure TypeScript settings
-- [ ] Set up environment variables (.env.local)
+- [x] Set up environment variables (.env.local)
 - [ ] Add README with setup instructions
 - [ ] Configure next.config.js
-- [ ] Set up proper Next.js metadata
+- [x] Set up proper Next.js metadata
 
 ### Step 1.2: API Integration Foundation
 - [ ] Research and select TheCocktailDB API
 - [ ] Create API implementation
-  - [ ] Set up Next.js API routes in app/api/
+  - [x] Set up Next.js API routes in app/api/
   - [ ] Implement server-side fetch utility
   - [ ] Add error handling middleware
   - [ ] Set up server-side caching with Node Cache
