@@ -19,9 +19,9 @@
   - [x] /lib
   - [x] /public
   - [x] /__tests__
-- [ ] Create GitHub Actions CI workflow for linting and testing
-  - [ ] Include Next.js build step
-  - [ ] Configure Next.js-specific linting rules
+- [x] Create GitHub Actions CI workflow for linting and testing
+  - [x] Include Next.js build step
+  - [x] Configure Next.js-specific linting rules
 - [ ] Configure TypeScript settings
 - [x] Set up environment variables (.env.local)
 - [ ] Add README with setup instructions
