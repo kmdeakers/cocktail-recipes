@@ -49,9 +49,15 @@ export const transformCocktailList = (drinks: Record<string, any>[]): CocktailLi
   return drinks.map(drink => ({
     id: drink.idDrink,
     name: drink.strDrink,
-    thumbnail: drink.strDrinkThumb || ''
+    image: drink.strDrinkThumb || ''
   }));
 };
+
+export const cocktailItemTransformer = (drink: Record<string, any>): CocktailListItem => ({
+    id: drink.idDrink,
+    name: drink.strDrink,
+    image: drink.strDrinkThumb || ''
+  });
 
 /**
  * Safely transforms API response to a typed format
