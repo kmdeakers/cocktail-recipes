@@ -17,11 +17,14 @@ export interface Cocktail {
 export interface CocktailListItem {
   id: string;
   name: string;
-  image: string;
   category: string;
 }
 
 export interface SearchResults {
   cocktails: CocktailListItem[];
   totalResults: number;
+}
+
+export interface ApiResponse<T> {
+  drinks: T[] | null;
 }
