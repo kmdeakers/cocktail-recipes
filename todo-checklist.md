@@ -25,14 +25,14 @@
 - [ ] Configure TypeScript settings
 - [x] Set up environment variables (.env.local)
 - [ ] Add README with setup instructions
-- [ ] Configure next.config.js
+- [x] Configure next.config.js
 - [x] Set up proper Next.js metadata
 
 ### Step 1.2: API Integration Foundation
 - [ ] Research and select TheCocktailDB API
 - [ ] Create API implementation
   - [x] Set up Next.js API routes in app/api/
-  - [ ] Implement server-side fetch utility
+  - [x] Implement server-side fetch utility
   - [ ] Add error handling middleware
   - [ ] Set up server-side caching with Node Cache
 - [ ] Implement specific API routes
