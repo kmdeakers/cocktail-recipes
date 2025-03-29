@@ -6,13 +6,15 @@ interface SearchBarProps {
   className?: string;
   placeholder?: string;
   variant?: 'default' | 'hero';
+  buttonClassName?: string;
 }
 
 export default function SearchBar({ 
   initialQuery = '', 
   className = '',
   placeholder = 'Search for cocktails...',
-  variant = 'default'
+  variant = 'default',
+  buttonClassName = ''
 }: SearchBarProps) {
   // Determine which style variant to use
   const isHero = variant === 'hero';
@@ -41,13 +43,13 @@ export default function SearchBar({
           name="q"
           defaultValue={initialQuery}
           placeholder={placeholder}
-          className={`w-full ${isHero ? 'pl-10 py-4 text-lg' : 'pl-10 py-2'} border-none focus:outline-none focus:ring-0 bg-transparent text-white placeholder-gray-400`}
+          className={`w-full ${isHero ? 'pl-10 py-4 text-lg' : 'pl-10 py-2'} border-none focus:outline-none focus:ring-0 bg-transparent text-gray-900 placeholder-gray-400`}
           aria-label="Search cocktails"
         />
         <div className="h-full w-px bg-gray-300 mx-1"></div>
         <button
           type="submit"
-          className={`${isHero ? 'py-4 px-6 text-lg' : 'py-2 px-4'} bg-transparent text-blue-600 hover:text-blue-800 focus:outline-none font-medium`}
+          className={`${isHero ? 'py-4 px-6 text-lg' : 'py-2 px-4'} ${buttonClassName || 'bg-transparent text-blue-600 hover:text-blue-800'} focus:outline-none font-medium`}
         >
           Search
         </button>

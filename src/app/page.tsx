@@ -14,24 +14,16 @@ export default async function HomePage() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      {/* Hero section with prominent search - removed background colors */}
+      {/* Hero section with prominent search */}
       <section className="mb-12 py-16 rounded-lg">
         <div className="max-w-3xl mx-auto text-center">
           {/* SearchBar component */}
           <SearchBar 
-            placeholder="Try 'Margarita', 'Mojito', 'Old Fashioned'..." 
+            placeholder="Try 'Margarita', 'Mojito', 'Old Fashioned', 'Negroni'..." 
             variant="hero"
             className="mb-6"
+            buttonClassName="bg-blue-400 hover:bg-blue-500 text-white"
           />
-          
-          {/* Quick links */}
-          <div className="mt-6 text-gray-600">
-            <span className="mr-2">Popular:</span>
-            <Link href="/search?q=margarita" className="text-blue-600 hover:underline mr-3">Margarita</Link>
-            <Link href="/search?q=martini" className="text-blue-600 hover:underline mr-3">Martini</Link>
-            <Link href="/search?q=mojito" className="text-blue-600 hover:underline mr-3">Mojito</Link>
-            <Link href="/search?q=whiskey+sour" className="text-blue-600 hover:underline">Whiskey Sour</Link>
-          </div>
         </div>
       </section>
 

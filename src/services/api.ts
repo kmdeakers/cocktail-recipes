@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { CancelToken } from 'axios';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://www.thecocktaildb.com/api/json/v1/1';
 
@@ -58,6 +58,27 @@ export const fetchCocktailByIngredient = async (ingredient: string) => {
         return response.data;
     } catch (error) {
         console.error('Error fetching cocktail by ingredient:', error);
+        throw error;
+    }
+};
+
+// Fetch cocktails by first letter
+export const fetchCocktailByFirstLetter = async (letter: string, cancelToken?: CancelToken) => {
+    if (letter.length !== 1) {
+        throw new Error('Letter must be a single character');
+    }
+    try {
+        const response = await apiClient.get('/search.php', {
+            params: { f: letter },
+            cancelToken
+        });
+        return response.data;
+    } catch (error: Error | unknown) {
+        if (axios.isCancel(error)) {
+            console.log('Request canceled');
+            return { drinks: null };
+        }
+        console.error('Error fetching cocktails by first letter:', error);
         throw error;
     }
 };

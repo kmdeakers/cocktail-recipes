@@ -31,20 +31,20 @@ export default function RootLayout({
       >
         <header className="bg-white shadow-sm py-4">
           <div className="container mx-auto px-4 flex justify-between items-center">
-            <Link href="/" className="text-xl font-bold text-blue-600">
+            <Link href="/" className="text-xl font-bold text-blue-400">
               Cocktail Recipes
             </Link>
             <nav>
               <ul className="flex space-x-6">
                 <li>
-                  <Link href="/" className="text-gray-700 hover:text-blue-600">
+                  <Link href="/" className="text-gray-500 hover:text-blue-400">
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/search"
-                    className="text-gray-700 hover:text-blue-600"
+                    className="text-gray-500 hover:text-blue-400"
                   >
                     Search
                   </Link>
@@ -52,9 +52,17 @@ export default function RootLayout({
                 <li>
                   <Link
                     href="/random"
-                    className="text-gray-700 hover:text-blue-600"
+                    className="text-gray-500 hover:text-blue-400"
                   >
                     Random
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/cocktails/list"
+                    className="text-gray-500 hover:text-blue-400"
+                  >
+                    Browse A-Z
                   </Link>
                 </li>
               </ul>
