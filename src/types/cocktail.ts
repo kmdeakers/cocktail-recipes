@@ -17,7 +17,7 @@ export interface Cocktail {
 export interface CocktailListItem {
   id: string;
   name: string;
-  category: string;
+  image: string;
 }
 
 export interface SearchResults {

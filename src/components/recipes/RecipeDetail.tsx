@@ -65,7 +65,7 @@ export default function RecipeDetail({ cocktail, className = '' }: RecipeDetailP
               {cocktail.ingredients.map((ingredient, index) => (
                 <li key={index} className="flex justify-between items-center">
                   <span className="text-gray-800">{ingredient.name}</span>
-                  <span className="text-gray-600">{ingredient.measure}</span>
+                  <span className="text-gray-800">{ingredient.measure}</span>
                 </li>
               ))}
             </ul>

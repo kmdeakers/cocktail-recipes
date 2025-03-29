@@ -11,16 +11,19 @@ interface RecipeCardProps {
 
 export default function RecipeCard({ cocktail, className = '' }: RecipeCardProps) {
   return (
-    <Link href={`/cocktails/${cocktail.id}`} className="block">
-      <Card className={`h-full transition-transform duration-200 hover:shadow-md hover:-translate-y-1 ${className}`}>
-        <div className="relative aspect-square w-full">
+    <Link 
+      href={`/cocktails/${cocktail.id}`} 
+      className="block group"
+    >
+      <Card className={`h-full transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 ${className}`}>
+        <div className="relative aspect-square w-full overflow-hidden">
           <Image 
             src={cocktail.image} 
             alt={cocktail.name}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             priority={false}
-            className="object-cover rounded-t-lg"
+            className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-105"
           />
         </div>
         <CardContent>
